@@ -120,3 +120,17 @@ array(5) {
 }
 */
 ```
+
+# Test it
+
+Run composer.
+
+```
+docker run --rm -it -v $(pwd):/app composer install
+```
+
+Execute tests.
+
+```
+docker run --rm -it -v $(pwd):/app -w /app php:7.1-cli php vendor/bin/phpunit tests/StdArrayTest.php --colors
+```
